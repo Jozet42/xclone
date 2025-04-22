@@ -1,6 +1,6 @@
 import { Search } from '@mui/icons-material'
 import React, { useEffect } from 'react'
-import "./Widgets.css"
+import "./widgets.css"
 
 function Widgets() {
     useEffect(() => {
@@ -25,7 +25,7 @@ function Widgets() {
                 <h2>いまどうしてる？</h2>
                 <div>
                     <blockquote className='twitter-tweet'>
-                        <a href="https://twitter.com/user/status/1716358192198975961"></a>
+                        <a href="https://twitter.com/user/status/1716358192198975961">元ツイートを見る</a>
                     </blockquote>
                 </div>
                 <div>

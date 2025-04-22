@@ -3,8 +3,6 @@ import { Avatar, Button, CircularProgress } from '@mui/material';
 import './Tweetbox.css'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import db from '../../firebase';
-import { div } from 'framer-motion/client';
-
 
 function Tweetbox() {
 

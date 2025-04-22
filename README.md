@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# ✨ XCLONE（React × Firebase）X風SNSアプリ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔍 概要
+このアプリは、ReactとFirebaseを使用して構築されたX（旧Twitter）風のSNSアプリです。  
+ユーザーは投稿文と画像をアップロードでき、タイムライン上に即時反映されます。  
+Material UIを用いたUI設計により、スマートでシンプルな操作体験を実現しています。
 
-## Available Scripts
+## 🛠 使用技術
+- React（CRA / JSX / Hooks）
+- Firebase（Firestore）
+- Material UI（@mui/material）
+- CSS（カスタムスタイリング）
+- Git / GitHub
 
-In the project directory, you can run:
+## ✨ 主な機能
+- テキスト投稿
+- 画像アップロード（5MB以下）
+- プレビュー表示機能
+- 投稿時バリデーション（空・サイズ）
+- Firebaseへの投稿保存（Firestore）
+- 投稿完了後のフォームリセット
+- 投稿内容のリアルタイム反映（予定）
 
-### `npm start`
+## 📷 スクリーンショット（※一部マスクしています）
+### 📝 投稿・タイムライン画面
+![投稿UIとタイムライン](./public/screenshot_xclone.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📂 ディレクトリ構成（抜粋）
+```bash
+xclone/
+├── public/
+│   ├── index.html
+│   ├── logo192.png など
+├── src/
+│   ├── firebase.jsx ← Firebase設定ファイル
+│   ├── App.jsx
+│   ├── components/
+│   │   ├── sidebar/
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── SidebarOption.jsx
+│   │   ├── timeline/
+│   │   │   ├── Timeline.jsx
+│   │   │   ├── Tweetbox.jsx ← 投稿フォーム
+│   │   │   └── Post.jsx
+│   │   └── widget/
+│   │       └── Widgets.jsx
+│   └── index.js
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 起動方法（開発用）
+```bash
+コピーする
+編集する
+git clone https://github.com/Jozet42/xclone.git
+cd xclone
+npm install
+npm start
+```
+.envファイルをルートに設置し、以下の内容を設定してください：
 
-### `npm test`
+```env
+コピーする
+編集する
+REACT_APP_API_KEY=xxxx
+REACT_APP_AUTH_DOMAIN=xxxx
+REACT_APP_PROJECT_ID=xxxx
+REACT_APP_STORAGE_BUCKET=xxxx
+REACT_APP_MESSAGING_SENDER_ID=xxxx
+REACT_APP_APP_ID=xxxx
+```
+参考用に .env.example を同梱しています。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧪 今後の拡張案
+- 投稿の編集・削除機能
+- ユーザー認証（Firebase Auth）導入
+- 投稿に対するコメント機能
+- ダークモード切り替え
+- タイムラインの無限スクロール化
 
-### `npm run build`
+## 🙌 制作メモ
+このアプリは職業訓練校でのReact/Firebase学習の応用として制作しました。
+X風の投稿スタイルを取り入れながら、リアルタイム通信と画像処理の実装も行っています。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 更新履歴
+- 2025/04/17：初回コミット＆README作成
+- 2025/04/18：Firebase連携 .env 対応完了・警告解消・リファクタリング実施
