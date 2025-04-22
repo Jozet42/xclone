@@ -23,7 +23,7 @@ Material UIを用いたUI設計により、スマートでシンプルな操作�
 
 ## 📷 スクリーンショット（※一部マスクしています）
 ### 📝 投稿・タイムライン画面
-![投稿UIとタイムライン](./public/screenshot_xclone.png)
+![投稿UIとタイムライン](./public/screenshot_x.png)
 
 ## 📂 ディレクトリ構成（抜粋）
 ```bash
